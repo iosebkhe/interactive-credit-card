@@ -162,9 +162,14 @@ const outLineHandler = function (e) {
 };
 
 // Blur handler
-const cardRotateHandler = function (e) {
-  cardFront.classList.toggle("card-front-rotate");
-  cardBack.classList.toggle("card-back-rotate");
+const cardRotateBack = function (e) {
+  cardFront.classList.add("card-front-rotate");
+  cardBack.classList.add("card-back-rotate");
+};
+
+const cardRotateFront = function (e) {
+  cardFront.classList.remove("card-front-rotate");
+  cardBack.classList.remove("card-back-rotate");
 };
 
 numberInput.addEventListener("input", numberInputHandler);
@@ -185,8 +190,8 @@ holderInput.addEventListener("blur", (e) => {
 
 //cvv input
 cvvInput.addEventListener("input", cvvInputHandler);
-cvvInput.addEventListener("click", cardRotateHandler);
-cvvInput.addEventListener("blur", cardRotateHandler);
+cvvInput.addEventListener("click", cardRotateBack);
+cvvInput.addEventListener("blur", cardRotateFront);
 
 monthInput.addEventListener("click", (e) => {
   outLineHandler(cardExpColBox);
