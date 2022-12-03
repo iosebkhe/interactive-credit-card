@@ -54,7 +54,7 @@ window.addEventListener("load", () => {
       rgb(0, 0, 0, 0.3) 50%,
       rgb(0, 0, 0, 0.9)
     ),
-    url(./images/${randomNum}.jpeg)`;
+    url(./images/${randomNum}-min.jpeg)`;
   });
 });
 
