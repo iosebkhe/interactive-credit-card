@@ -1,9 +1,9 @@
 # Interactive Credit Card
 
-## I've gained a lot more confidence working with JS and got some good takeaways from this little project
+### I've gained a lot more confidence working with JS and got some good takeaways from this little project
 
 ### Links
-- Live Site URL: [Click here](https://tipcalc-iosebkhe.netlify.app/)
+- Live Site URL: [Click here](https://interactivecard-iosebkhe.netlify.app/)
 
 ### Created with
 - Javascript
