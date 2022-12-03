@@ -1,0 +1,167 @@
+@use "./variables" as *;
+
+.card {
+  margin: 0 auto;
+  max-width: 37rem;
+  font-family: $font-family-card;
+  color: white;
+  position: relative;
+  height: 20rem;
+  perspective: 280rem;
+  transform: translateY(50%);
+
+  &__side {
+    // background-image: linear-gradient(
+    //     to bottom,
+    //     rgb(0, 0, 0, 0.3) 50%,
+    //     rgb(0, 0, 0, 0.9)
+    //   ),
+    //   url(./images/1.jpeg);
+    background-position: bottom;
+    background-size: cover;
+    height: 20rem;
+    transition: transform 1000ms cubic-bezier(0.55, 0, 1, 0.45);
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 1rem;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 2.5rem 1.5rem;
+    overflow: hidden;
+    box-shadow: $card-box-shadow;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  // Card Front Style
+  &-front {
+    //Chip and Type Style
+    &__logos {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__chip {
+      &-img {
+        max-width: 5rem;
+      }
+    }
+
+    &__type {
+      &-img {
+        max-width: 5rem;
+      }
+    }
+
+    //Card Number Style
+    &__number {
+      border-radius: 0.5rem;
+      outline: 0 solid $border-color;
+      transition: outline 250ms ease-in-out;
+
+      &-label {
+        display: block;
+        width: 100%;
+        font-size: 2.5rem;
+        cursor: pointer;
+        text-shadow: $text-shadow;
+      }
+    }
+
+    //Card Info Style
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-holder {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-name {
+        text-transform: uppercase;
+
+        border-radius: 0.5rem;
+        outline: 0 solid $border-color;
+        transition: outline 250ms ease-in-out;
+      }
+    }
+
+    //Card Expiration Style
+    &__exp {
+      display: flex;
+      flex-direction: column;
+
+      &-col {
+        display: flex;
+        gap: 0.5rem;
+        text-shadow: $text-shadow;
+
+        border-radius: 0.5rem;
+        outline: 0 solid $border-color;
+
+        transition: outline 250ms ease-in-out;
+      }
+    }
+  }
+
+  // Card Back Style
+  &-back {
+    transform: rotateY(180deg);
+
+    // Card Back Stripe Style
+    &__stripe {
+      width: 100%;
+      height: 3rem;
+      background-color: rgb(0, 0, 0, 0.89);
+      position: absolute;
+      left: 0;
+    }
+
+    //Card Back CVV Style
+    &__cvv-box {
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &__cvv {
+      font-size: 1.3rem;
+      margin-right: 0.5rem;
+    }
+
+    &__cvv-white {
+      width: 100%;
+      margin-top: 0.5rem;
+      background-color: white;
+      border-radius: 0.5rem;
+      height: 4rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &__cvv-number {
+      font-size: 1.8rem;
+      color: black;
+      margin-right: 0.5rem;
+    }
+
+    // Card Back Type Style
+    &__type {
+      display: flex;
+      justify-content: flex-end;
+
+      &-img {
+        max-width: 5rem;
+      }
+    }
+  }
+}

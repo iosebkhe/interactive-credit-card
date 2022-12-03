@@ -1,0 +1,266 @@
+.card {
+  margin: 0 auto;
+  max-width: 37rem;
+  font-family: "Source Code Pro", monospace;
+  color: white;
+  position: relative;
+  height: 20rem;
+  perspective: 280rem;
+  transform: translateY(50%);
+}
+.card__side {
+  background-position: bottom;
+  background-size: cover;
+  height: 20rem;
+  transition: transform 1000ms cubic-bezier(0.55, 0, 1, 0.45);
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 1rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  padding: 2.5rem 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 7rem 0 rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.card-front__logos {
+  display: flex;
+  justify-content: space-between;
+}
+.card-front__chip-img {
+  max-width: 5rem;
+}
+.card-front__type-img {
+  max-width: 5rem;
+}
+.card-front__number {
+  border-radius: 0.5rem;
+  outline: 0 solid hsl(213deg, 22%, 84%);
+  transition: outline 250ms ease-in-out;
+}
+.card-front__number-label {
+  display: block;
+  width: 100%;
+  font-size: 2.5rem;
+  cursor: pointer;
+  text-shadow: 0 0.2rem 0.1rem rgb(0, 0, 0);
+}
+.card-front__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-front__info-holder {
+  display: flex;
+  flex-direction: column;
+}
+.card-front__info-name {
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  outline: 0 solid hsl(213deg, 22%, 84%);
+  transition: outline 250ms ease-in-out;
+}
+.card-front__exp {
+  display: flex;
+  flex-direction: column;
+}
+.card-front__exp-col {
+  display: flex;
+  gap: 0.5rem;
+  text-shadow: 0 0.2rem 0.1rem rgb(0, 0, 0);
+  border-radius: 0.5rem;
+  outline: 0 solid hsl(213deg, 22%, 84%);
+  transition: outline 250ms ease-in-out;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+.card-back__stripe {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.89);
+  position: absolute;
+  left: 0;
+}
+.card-back__cvv-box {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.card-back__cvv {
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+}
+.card-back__cvv-white {
+  width: 100%;
+  margin-top: 0.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  height: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.card-back__cvv-number {
+  font-size: 1.8rem;
+  color: black;
+  margin-right: 0.5rem;
+}
+.card-back__type {
+  display: flex;
+  justify-content: flex-end;
+}
+.card-back__type-img {
+  max-width: 5rem;
+}
+
+.form-el {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-color: white;
+  padding: 14rem 2.5rem 3.5rem 2.5rem;
+  box-shadow: 0 2rem 6rem 0 rgba(0, 0, 0, 0.35);
+}
+
+.form {
+  font-family: "Source Sans Pro", sans-serif;
+  color: hsl(210deg, 56%, 23%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.form__input {
+  display: flex;
+  flex-direction: column;
+}
+.form__input-label {
+  font-size: 1.3rem;
+}
+.form__input-input {
+  text-transform: uppercase;
+}
+.form__exp-box {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.form__exp {
+  display: flex;
+  flex-direction: column;
+}
+.form__exp-select-box {
+  display: flex;
+  align-items: center;
+}
+.form__exp-select {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.form__cvv {
+  display: flex;
+  flex-direction: column;
+}
+.form__btn {
+  margin-top: 1rem;
+  background-color: hsl(218deg, 71%, 48%);
+  color: white;
+  font-size: 2.1rem;
+  transform: scale(0.99);
+  cursor: pointer;
+}
+.form__btn:hover {
+  transform: scale(1);
+  box-shadow: 0 1rem 2rem -1.3rem rgb(32, 56, 117);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(206deg, 83%, 93%);
+}
+
+img,
+input {
+  width: 100%;
+  display: block;
+}
+
+input,
+select {
+  border: 0.1rem solid hsl(213deg, 22%, 84%);
+  outline: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.8rem;
+  color: hsl(210deg, 56%, 23%);
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  margin-top: 0.5rem;
+}
+
+input:focus,
+select:focus {
+  box-shadow: 0 1rem 2rem -1.3rem rgb(32, 56, 117);
+}
+
+input:focus,
+input:hover,
+select:focus,
+select:hover {
+  border: 0.1rem solid hsl(218deg, 71%, 48%);
+}
+
+.container {
+  width: 100%;
+  max-width: 53rem;
+  transform: translateY(-15%);
+}
+
+.card-front-rotate {
+  transform: rotateY(-180deg);
+}
+
+.card-back-rotate {
+  transform: rotateY(0);
+}
+
+.header {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.3rem;
+}
+
+.label {
+  cursor: pointer;
+  font-size: 1.8rem;
+  text-shadow: 0 0.2rem 0.1rem rgb(0, 0, 0);
+}
+
+.outline-active {
+  outline: 0.2rem solid hsl(213deg, 22%, 84%);
+}
+
+/*# sourceMappingURL=style.css.map */

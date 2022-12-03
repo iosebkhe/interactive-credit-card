@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&family=Source+Sans+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Card and Form -->
+    <section class="container" id="container">
+      <!-- Card -->
+      <div class="card" id="card">
+        <!-- Card Front Side -->
+        <div class="card-front card__side" id="front">
+          <!-- Card Logos: Chip and Type -->
+          <div class="card-front__logos">
+            <div class="card-front__chip">
+              <img
+                class="card-front__chip-img"
+                src="images/chip.png"
+                alt="credit card chip"
+              />
+            </div>
+            <div class="card-front__type" id="type-box">
+              <img
+                id="type"
+                class="card-front__type-img type"
+                src="images/visa.png"
+                alt="bank logo"
+              />
+            </div>
+          </div>
+          <!-- Card Number -->
+          <div class="card-front__number" id="card-number-box">
+            <label
+              id="card-number-label"
+              for="number"
+              class="card-front__number-label"
+              >#### #### #### ####</label
+            >
+          </div>
+          <!-- Card Info -->
+          <div class="card-front__info" id="card-info-box">
+            <!-- Card Holder -->
+            <div class="card-front__info-holder" id="card-holder-box">
+              <label
+                for="holder"
+                class="card-front__info-header header"
+                id="card-holder-label"
+              >
+                Card Holder
+              </label>
+              <label
+                for="holder"
+                class="card-front__info-name label"
+                id="card-holder-name"
+              >
+                FULL NAME
+              </label>
+            </div>
+            <!-- Card Exp. Date -->
+            <div class="card-front__exp" id="card-exp-box">
+              <label
+                for="month"
+                class="card-front__exp-header header"
+                id="card-exp-label"
+              >
+                Expires
+              </label>
+              <div class="card-front__exp-col" id="card-exp-col-box">
+                <label
+                  for="month"
+                  class="card-front__exp-date label"
+                  id="card-exp-month"
+                >
+                  MM
+                </label>
+                /
+                <label
+                  for="year"
+                  class="card-front__exp-date label"
+                  id="card-exp-year"
+                >
+                  YY
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card Back Side -->
+        <div class="card-back card__side" id="back">
+          <!-- Back Stripe -->
+          <div class="card-back__stripe">&nbsp;</div>
+          <!-- CVV Part -->
+          <div class="card-back__cvv-box">
+            <p class="card-back__cvv">CVV</p>
+            <div class="card-back__cvv-white">
+              <p class="card-back__cvv-number" id="cvv"></p>
+            </div>
+          </div>
+          <!-- Back Bank Logo -->
+          <div class="card-back__type">
+            <img
+              class="card-back__type-img type"
+              src="images/visa.png"
+              alt="bank logo"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="form-el" id="form-box">
+        <form class="form" id="form">
+          <!-- Card Number Form -->
+          <div class="form__input">
+            <label for="number" class="form__input-label"> Card Number </label>
+            <input type="text" class="form__input-input number" id="number" />
+          </div>
+          <!-- Card Holder Form -->
+          <div class="form__input">
+            <label for="holder" class="form__input-label"> Card Holder </label>
+            <input
+              type="text"
+              class="form__input-input"
+              id="holder"
+              maxlength="25"
+            />
+          </div>
+          <!-- Card Expiration Form -->
+          <div class="form__exp-box">
+            <!-- Month & Year -->
+            <div class="form__exp">
+              <label for="month" class="form__input-label">
+                Expiration Date
+              </label>
+              <div class="form__exp-select-box">
+                <select id="month" class="form__exp-select month">
+                  <option value="Month" disabled selected>Month</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <select id="year" class="form__exp-select year">
+                  <option value="Year" disabled selected>Year</option>
+                  <option value="23">2023</option>
+                  <option value="24">2024</option>
+                  <option value="25">2025</option>
+                  <option value="26">2026</option>
+                  <option value="27">2027</option>
+                  <option value="28">2028</option>
+                  <option value="29">2029</option>
+                  <option value="30">2030</option>
+                  <option value="31">2031</option>
+                  <option value="32">2032</option>
+                  <option value="33">2033</option>
+                </select>
+              </div>
+            </div>
+            <!-- Form CVV  -->
+            <div class="form__cvv" id="form-cvv">
+              <label for="cvv" class="form__input-label">CVV</label>
+              <input
+                type="text"
+                id="cvv"
+                class="form__cvv-input"
+                maxlength="7"
+              />
+            </div>
+          </div>
+          <!-- Form Submit Button -->
+          <input class="form__btn" type="submit" value="Submit" id="btn" />
+        </form>
+      </div>
+    </section>
+    <script src="./cleave.min.js"></script>
+    <script src="./cleave-phone.i18n.js"></script>
+  </body>
+</html>
