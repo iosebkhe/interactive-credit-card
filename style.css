@@ -6,7 +6,11 @@
   position: relative;
   height: 20rem;
   perspective: 280rem;
-  transform: translateY(50%);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 .card__side {
   background-position: bottom;
@@ -178,14 +182,11 @@
   box-shadow: 0 1rem 2rem -1.3rem rgb(32, 56, 117);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 *,
 *::after,
 *::before {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
 }
 
@@ -196,9 +197,10 @@ html {
 
 body {
   font-size: 1.6rem;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
   background-color: hsl(206deg, 83%, 93%);
 }
 
@@ -236,7 +238,7 @@ select:hover {
 .container {
   width: 100%;
   max-width: 53rem;
-  transform: translateY(-15%);
+  position: relative;
 }
 
 .card-front-rotate {

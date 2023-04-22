@@ -2,14 +2,11 @@
 @use "./_card.scss" as *;
 @use "./_form.scss" as *;
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 *,
 *::after,
 *::before {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
 }
 
@@ -20,9 +17,10 @@ html {
 
 body {
   font-size: 1.6rem;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
   background-color: $background-color;
 }
 
@@ -62,7 +60,7 @@ select:hover {
 .container {
   width: 100%;
   max-width: 53rem;
-  transform: translateY(-15%);
+  position: relative;
 }
 
 // utility classes
